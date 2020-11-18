@@ -22,7 +22,7 @@
  justify-content: flex-end;
 }
 .content-with-background-image{
- background-image: url(/static/img/image4.jpg);
+ background-image: url(/static/img/image4.jpeg);
  background-attachment: fixed;
  background-size: auto 1200px;
  background-repeat: no-repeat;
@@ -32,7 +32,7 @@
  padding: 10px 15px 10px 20px;
 }
 .content-with-background-image2{
- background-image: url(/static/img/image1.jpg);
+ background-image: url(/static/img/image1.jpeg);
  background-attachment: scroll;
  background-size: auto 1200px;
  background-repeat: no-repeat;
