@@ -45,15 +45,14 @@ def process_signup():
     password = request.form['password']
     # let's write to the database
     try:
-      user = models.User(firstname=firstname, lastname=lastname, othernames=othernames, email=email, password=password)
-      db.session.add(user)
-      db.session.commit()
+        user = models.User(firstname=firstname, lastname=lastname, othernames=othernames, email=email, password=password)
+        db.session.add(user)
+        db.session.commit()
     except Exception as e:
-       # Error caught, prepare error information for return
-       information = 'Could not submit. The error message is {}'.format(e.__cause__)
-       return render_template('signup.html', title="SIGN-UP", information=information)
+        # Error caught, prepare error information for return
+        information = 'Could not submit. The error message is {}'.format(e.__cause__)
+        return render_template('signup.html', title="SIGN-UP", information=information)
 
     # If we have gotten to this point, it means that database write has been successful. Let us compose success info
     information = 'User by name {} {} successfully added. The login name is the email address {}.'.format(firstname, lastname, email)
-
     return render_template('signup.html', title="SIGN-UP", information=information)
